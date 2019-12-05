@@ -11,13 +11,11 @@ console.log(validParentheses(')('))
 
 function validParentheses(parentheses) {
   let arrayParentheses = parentheses.split('');
-
   let balanced = !arrayParentheses.reduce((sum, parentheses) => {
     if(sum < 0) { return sum } // para o caso de começar com ")"
     if(parentheses ===  "(") { return ++sum }
     if(parentheses ===  ")") { return --sum }
   }, 0);
-
   return balanced;
 }
 
