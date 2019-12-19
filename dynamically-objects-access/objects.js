@@ -36,3 +36,23 @@ let person = {
 
 console.log(person["first name"]);      // "Bruno"
 console.log(person["last name"]);       // "Ramires"
+
+// ...
+
+
+// Object destructuring
+
+// We could also consider object destructuring as a means to access a property in an object, but as follows:
+
+let foo = {
+  bar: 'Hello World',
+  baz: 'How are you doing?',
+  last: 'Quite alright'
+};
+
+let prop = 'last';
+let { bar, baz, [prop]: customName } = foo;
+
+// bar = 'Hello World'
+// baz = 'How are you doing?'
+// customName = 'Quite alright'
