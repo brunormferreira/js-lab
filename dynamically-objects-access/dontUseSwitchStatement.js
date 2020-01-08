@@ -92,4 +92,4 @@ let drink = getDrink('coke');
 // The drink I chose was Coke
 console.log(drink);
 
-// Article: encurtador.com.br/agvyG
+// Article: https://ultimatecourses.com/blog/deprecating-the-switch-statement-for-object-literals#object-literal-fall-through
