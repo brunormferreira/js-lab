@@ -20,3 +20,10 @@ obj[func](parameters); // sends parameters as array
 
 obj[func].apply(this, parameters); // sends parameters as individual values
 // method: [Arguments] { '0': 'p1', '1': 'p2', '2': 'p3' }
+
+// Clearing the console screen without calling functions
+Object.defineProperty(window, 'clear', { // or `cls` if you want
+  get() {
+    console.clear();
+  }
+});
