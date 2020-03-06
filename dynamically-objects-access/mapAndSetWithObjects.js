@@ -76,3 +76,15 @@ const set = new Set(Object.values(foods));
 
 console.log(set.size); // 4
 console.log(set.has('🍨')); // true
+
+/* ----------------------------------------------------------------------------- */
+
+const entries = new Map([
+  ['foo', 'bar'],
+  ['baz', 42]
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// expected output: Object { foo: "bar", baz: 42 }
