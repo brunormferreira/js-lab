@@ -1,5 +1,10 @@
-const composition = (fn1, fn2, fn3, value) => {
-  return fn3(fn2(fn1(value)))
+const composition = (...fns) => {
+  // currying (lazy eval.)
+  return function(value) {
+    return fns.reduce((acc, fn) => {
+      return fn(acc)
+    }, value)
+  }
 }
 
 const scream = (text) => {
@@ -18,7 +23,12 @@ const result = composition(
   scream,
   emphasize,
   separe,
-  'HEEEYYYY',
+)('HEEEYYYY')
+
+const result2 = composition(
+  scream,
+  emphasize,
 )
 
 console.log(result)
+console.log(result2('REUSABLE'))
